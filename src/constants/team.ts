@@ -41,8 +41,7 @@ export const teamMembers: TeamMember[] = [
     image: matt,
     social: {
       linkedin: 'https://www.linkedin.com/in/matthewcarolan/',
-      github: 'https://github.com/matthewcarolan',
-      x: 'https://x.com/matthewcarolan',
+      x: 'https://x.com/themattcarolan',
       email: 'matt@hackerrivals.com ',
     },
   },
@@ -70,7 +69,7 @@ export const teamMembers: TeamMember[] = [
     social: {
       linkedin: 'https://www.linkedin.com/in/miladtajvidi/',
       github: 'https://github.com/miladtajvidi',
-      x: 'https://x.com/miladtajvidi',
+      portfolio: 'https://miladtajvidi.github.io/portfolio-milad/',
       email: 'milad.tajvidi@gmail.com',
     },
   },
@@ -84,8 +83,7 @@ export const teamMembers: TeamMember[] = [
     social: {
       linkedin: 'https://www.linkedin.com/in/neharikasidda/',
       portfolio: 'https://neharikasidda.com/',
-      x: 'https://x.com/neharikasidda',
-      email: 'neharika@hackerrivals.com',
+      email: 'neharikasidda@gmail.com',
     },
   },
   {
@@ -96,9 +94,8 @@ export const teamMembers: TeamMember[] = [
       'Building and nurturing our gaming community, connecting players and fostering the competitive spirit.',
     image: ade,
     social: {
-      linkedin: 'https://www.linkedin.com/in/adetokunbo-ige/',
-      github: 'https://github.com/adetokunboige',
-      x: 'https://x.com/adetokunboige',
+      linkedin: 'https://www.linkedin.com/in/igeadetokunbo/',
+      github: 'https://github.com/ExitoLab',
       email: 'igeadetokunbo@gmail.com',
     },
   },
@@ -110,9 +107,7 @@ export const teamMembers: TeamMember[] = [
       'Curating engaging activities and entertainment to keep the energy high throughout the event.',
     image: rohan,
     social: {
-      linkedin: 'https://www.linkedin.com/in/rohan-dani/',
-      github: 'https://github.com/rohandani',
-      x: 'https://x.com/rohandani',
+      linkedin: 'https://www.linkedin.com/in/rohanhdani/',
       email: 'rohanhdani@gmail.com',
     },
   },
