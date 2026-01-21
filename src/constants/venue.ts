@@ -9,8 +9,8 @@ export const venueContent = {
   mainInfo: {
     name: 'BCIT Downtown Campus',
     address: {
-      street: '555 Seymour Street',
-      city: 'Vancouver, BC V6B 3H6',
+      street: '1455 Quebec St',
+      city: 'Vancouver, BC V6A 3Z7',
     },
     event: {
       date: 'Saturday, October 25th, 2025',
