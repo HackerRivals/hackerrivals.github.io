@@ -23,8 +23,8 @@ const VenueInfo = () => {
 
   // Helper function to add event to calendar
   const addToCalendar = () => {
-    const startDate = '20251025T100000'; // October 25, 2025, 10:00 AM
-    const endDate = '20251025T170000'; // October 25, 2025, 5:00 PM
+    const startDate = '20260501T100000'; // May 1, 2026, 10:00 AM
+    const endDate = '20260501T170000'; // May 1, 2026, 5:00 PM
     const title = encodeURIComponent('Hacker Rivals Competition');
     const location = encodeURIComponent(
       `${venueContent.mainInfo.address.street}, ${venueContent.mainInfo.address.city}`,

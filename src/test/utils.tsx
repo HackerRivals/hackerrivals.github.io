@@ -47,7 +47,7 @@ export const mockFAQItems = [
   },
   {
     question: 'When is the event?',
-    answer: 'The event is scheduled for October 25, 2025.',
+    answer: 'The event is scheduled for May 1st, 2026.',
   },
 ];
 
