@@ -1,7 +1,6 @@
 import jaskaran from '../assets/jaskaran.png';
 import matt from '../assets/matt.png';
 import milad from '../assets/milad.jpg';
-import ade from '../assets/ade.jpg';
 import rohan from '../assets/rohan.png';
 import join from '../assets/join.jpg';
 import neha from '../assets/neha.png';
@@ -84,19 +83,6 @@ export const teamMembers: TeamMember[] = [
       linkedin: 'https://www.linkedin.com/in/neharikasidda/',
       portfolio: 'https://neharikasidda.com/',
       email: 'neharikasidda@gmail.com',
-    },
-  },
-  {
-    id: 'venue',
-    name: 'Ade Ige',
-    role: 'Venue',
-    description:
-      'Building and nurturing our gaming community, connecting players and fostering the competitive spirit.',
-    image: ade,
-    social: {
-      linkedin: 'https://www.linkedin.com/in/igeadetokunbo/',
-      github: 'https://github.com/ExitoLab',
-      email: 'igeadetokunbo@gmail.com',
     },
   },
   {

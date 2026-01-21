@@ -24,7 +24,7 @@ const Team = () => {
         </div>
 
         {/* Team Members - Modern Circular Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 lg:gap-8 xl:gap-12 mb-12 md:mb-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 lg:gap-10 xl:gap-12 mb-12 md:mb-16 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
             <div
               key={member.id}
