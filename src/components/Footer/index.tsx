@@ -95,7 +95,10 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col items-center md:items-start">
-              <p className="font-body text-muted-foreground">{footerContent.bottom.copyright}</p>
+              {/* TODO: Update copyright to current year every time*/}
+              <p className="font-body text-muted-foreground">
+                {'© ' + new Date().getFullYear() + ' ' + footerContent.bottom.copyright}
+              </p>
               <div className="flex flex-col sm:flex-row items-center md:items-start gap-1 sm:gap-4 mt-1">
                 <p className="font-body text-muted-foreground text-sm">
                   {footerContent.creator.website.text}{' '}

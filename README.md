@@ -235,7 +235,6 @@ This project is part of the Hacker Rivals event series. All rights reserved.
 
 - **Science World** - Venue partner
 - **AWS** - Cloud infrastructure sponsor
-- **Couchbase** - Technology sponsor
 - **React Community** - Framework and ecosystem
 - **Open Source Contributors** - Tools and libraries
 

@@ -159,15 +159,30 @@ const VenueInfo = () => {
           </div>
         </div>
 
-        {/* Dual Level Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Level 2 */}
+        {/* Three Level Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {/* Presentation Stage */}
           <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-xl p-6">
-            <h3 className="font-heading font-bold text-xl mb-4 text-primary">
-              {venueContent.levels.level2.title}
+            <h3 className="font-heading font-bold text-xl mb-4 text-secondary">
+              {venueContent.levels.presentationStage.title}
             </h3>
             <div className="space-y-3">
-              {venueContent.levels.level2.features.map((feature, index) => (
+              {venueContent.levels.presentationStage.features.map((feature, index) => (
+                <div key={index} className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                  <span className="text-muted-foreground">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Main Stage */}
+          <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-xl p-6">
+            <h3 className="font-heading font-bold text-xl mb-4 text-primary">
+              {venueContent.levels.mainStage.title}
+            </h3>
+            <div className="space-y-3">
+              {venueContent.levels.mainStage.features.map((feature, index) => (
                 <div key={index} className="flex items-center">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
                   <span className="text-muted-foreground">{feature}</span>
@@ -179,10 +194,10 @@ const VenueInfo = () => {
           {/* Level 5 */}
           <div className="bg-card/50 backdrop-blur-sm border border-secondary/20 rounded-xl p-6">
             <h3 className="font-heading font-bold text-xl mb-4 text-secondary">
-              {venueContent.levels.level5.title}
+              {venueContent.levels.hackerHub.title}
             </h3>
             <div className="space-y-3">
-              {venueContent.levels.level5.features.map((feature, index) => (
+              {venueContent.levels.hackerHub.features.map((feature, index) => (
                 <div key={index} className="flex items-center">
                   <div className="w-2 h-2 bg-secondary rounded-full mr-3"></div>
                   <span className="text-muted-foreground">{feature}</span>

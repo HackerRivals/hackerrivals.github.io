@@ -13,8 +13,8 @@ export const venueContent = {
     },
     event: {
       date: 'Saturday, May 1st, 2026',
-      time: '10:00 AM - 5:00 PM',
-      afterParty: 'Science World (5:00 PM+)',
+      time: '02:00 PM - 07:00 PM',
+      afterParty: 'Science World (07:00 PM - 09:00 PM)',
     },
     labels: {
       date: 'Date:',
@@ -39,24 +39,21 @@ export const venueContent = {
     },
   },
   levels: {
-    level2: {
-      title: 'Level 2 - Main Event Floor',
+    presentationStage: {
+      title: 'Presentation Stage',
+      features: ['Seated Audience Area', 'Large Screen Displays'],
+    },
+    mainStage: {
+      title: 'Main Stage',
       features: [
         'Main Stage with Professional AV',
         'Seated Audience Area',
         'Large Screen Displays',
-        'Food & Beverage Station',
-        'Sponsor Booth Area',
       ],
     },
-    level5: {
-      title: 'Level 5 - Hackathon Hub',
-      features: [
-        'Hackathon Workspace',
-        'Workshop Rooms',
-        'Breakout Spaces',
-        'Additional Sponsor Booths',
-      ],
+    hackerHub: {
+      title: 'Hacker Hub',
+      features: ['Hackathon Workspace', 'Workshop Rooms', 'Breakout Spaces'],
     },
   },
   amenities: [
@@ -81,7 +78,7 @@ export const venueContent = {
     {
       icon: Trophy,
       title: 'Prize Competition',
-      description: '$1,000 cash prize sponsored by Couchbase plus additional sponsor prizes',
+      description: '$1,000 cash prize plus additional sponsor prizes',
       colors: {
         background: 'bg-accent/20',
         text: 'text-accent',

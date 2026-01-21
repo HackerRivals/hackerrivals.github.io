@@ -36,7 +36,7 @@ export const footerContent = {
     ],
   },
   bottom: {
-    copyright: '© 2025 HackerRivals. All rights reserved.',
+    copyright: 'HackerRivals. All rights reserved.',
     links: [
       { name: 'Privacy Policy', href: '#' },
       { name: 'Terms of Service', href: '#' },

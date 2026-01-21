@@ -1,32 +1,32 @@
-import { sponsors } from '../../constants/sponsors';
+// import { sponsors } from '../../constants/sponsors';
 import { sponsorsContent } from '../../constants/sponsorsContent';
 
 const Sponsors = () => {
-  const getTierStyle = (tier: string) => {
-    switch (tier) {
-      case 'Platinum':
-        return 'border-primary text-primary shadow-neon';
-      case 'Gold':
-        return 'border-secondary text-secondary shadow-green';
-      case 'Silver':
-        return 'border-accent text-accent shadow-purple';
-      default:
-        return 'border-muted-foreground text-muted-foreground';
-    }
-  };
+  // const getTierStyle = (tier: string) => {
+  //   switch (tier) {
+  //     case 'Platinum':
+  //       return 'border-primary text-primary shadow-neon';
+  //     case 'Gold':
+  //       return 'border-secondary text-secondary shadow-green';
+  //     case 'Silver':
+  //       return 'border-accent text-accent shadow-purple';
+  //     default:
+  //       return 'border-muted-foreground text-muted-foreground';
+  //   }
+  // };
 
-  const getTierSize = (tier: string) => {
-    switch (tier) {
-      case 'Platinum':
-        return 'w-32 h-32 text-2xl';
-      case 'Gold':
-        return 'w-28 h-28 text-xl';
-      case 'Silver':
-        return 'w-24 h-24 text-lg';
-      default:
-        return 'w-64 h-20';
-    }
-  };
+  // const getTierSize = (tier: string) => {
+  //   switch (tier) {
+  //     case 'Platinum':
+  //       return 'w-32 h-32 text-2xl';
+  //     case 'Gold':
+  //       return 'w-28 h-28 text-xl';
+  //     case 'Silver':
+  //       return 'w-24 h-24 text-lg';
+  //     default:
+  //       return 'w-64 h-20';
+  //   }
+  // };
 
   return (
     <section id="sponsors" className="py-16 md:py-30 px-4 relative overflow-hidden">
@@ -139,7 +139,7 @@ const Sponsors = () => {
         </div> */}
 
         {/* Sponsors */}
-        <div className="mb-12 md:mb-16 animate-slide-up delay-700">
+        {/* <div className="mb-12 md:mb-16 animate-slide-up delay-700">
           <h3 className="font-heading font-bold text-sm md:text-base text-center mb-8 text-muted-foreground">
             {sponsorsContent.tiers.none}
           </h3>
@@ -169,7 +169,7 @@ const Sponsors = () => {
                 </div>
               ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Call for sponsors */}
         <div className="text-center animate-fade-in delay-800">

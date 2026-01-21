@@ -63,7 +63,7 @@ export const eSportsContent = {
       {
         number: 1,
         title: 'Concept Presentation',
-        time: '12:30 PM - Level 5 Stage',
+        time: '03:00 PM - Hacker Stage',
         description: 'Teams pitch their innovative concepts to judges and live audience.',
         colors: {
           background: 'from-primary to-primary/80',
@@ -73,7 +73,7 @@ export const eSportsContent = {
       {
         number: 2,
         title: 'MVP Knockout',
-        time: '2:15 PM - Level 5 Stage',
+        time: '04:30 PM - Hacker Stage',
         description: 'Intense elimination round - only 2 teams advance to the final!',
         colors: {
           background: 'from-secondary to-secondary/80',
@@ -83,7 +83,7 @@ export const eSportsContent = {
       {
         number: 3,
         title: 'Championship Final',
-        time: '4:00 PM - Main Stage (Level 2)',
+        time: '06:00 PM - Main Stage',
         description: 'The ultimate showdown with polished presentations and live demos!',
         colors: {
           background: 'from-accent to-accent/80',
