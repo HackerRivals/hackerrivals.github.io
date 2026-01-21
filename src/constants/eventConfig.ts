@@ -29,7 +29,7 @@ export const eventConfig = {
     event: {
       date: 'May 1, 2026',
       location: 'Science World • 10am-5pm',
-      afterParty: '+ VIP After Party @ AWS Building',
+      afterParty: '+ VIP After Party @ Science World',
       prize: '$1000 Cash Prize',
     },
     countdown: {
