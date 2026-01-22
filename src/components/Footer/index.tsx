@@ -1,4 +1,4 @@
-import { Mail, Message, Twitter } from 'iconoir-react';
+import { Discord, Github, Mail } from 'iconoir-react';
 import { navItems } from '../../constants/navbar';
 import { footerContent } from '../../constants/footer';
 import ViewRulesButton from '../ViewRulesButton';
@@ -19,14 +19,14 @@ const Footer = () => {
               {footerContent.brand.description}
             </p>
             <div className="flex space-x-4">
-              <a href="#" aria-label="Twitter">
-                <Twitter className="hover:text-primary transition-colors duration-300 text-muted-foreground" />
+              <a href={footerContent.social.links.discord} aria-label="Discord">
+                <Discord className="hover:text-primary transition-colors duration-300 text-muted-foreground" />
               </a>
-              <a href="#" aria-label="Discord">
-                <Message className="hover:text-primary transition-colors duration-300 text-muted-foreground" />
-              </a>
-              <a href="mailto:info@hackerrivals.com" aria-label="Email">
+              <a href={footerContent.social.links.email} aria-label="Email">
                 <Mail className="hover:text-primary transition-colors duration-300 text-muted-foreground" />
+              </a>
+              <a href={footerContent.social.links.github} aria-label="GitHub">
+                <Github className="hover:text-primary transition-colors duration-300 text-muted-foreground" />
               </a>
             </div>
           </div>
@@ -84,9 +84,21 @@ const Footer = () => {
               {footerContent.contact.title}
             </h3>
             <ul className="space-y-2 font-body text-muted-foreground">
-              {footerContent.contact.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
+              <li>
+                <a href={'mailto:' + footerContent.contact.items.email}>
+                  {footerContent.contact.items.email}
+                </a>
+              </li>
+              <li>
+                <a href={footerContent.contact.items.discord}>
+                  {footerContent.contact.items.discord}
+                </a>
+              </li>
+              <li>
+                <a href={footerContent.contact.items.github}>
+                  {footerContent.contact.items.github}
+                </a>
+              </li>
             </ul>
           </div>
         </div>

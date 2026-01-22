@@ -28,7 +28,7 @@ export const eventConfig = {
     },
     event: {
       date: 'May 1, 2026',
-      location: 'Science World • 10am-5pm',
+      location: 'Science World • 2pm-7pm',
       afterParty: '+ VIP After Party @ Science World',
       prize: '$1000 Cash Prize',
     },

@@ -28,12 +28,11 @@ export const footerContent = {
   },
   contact: {
     title: 'Contact',
-    items: [
-      'info@hackerrivals.com',
-      'Discord: /hackerrivals',
-      'Twitter: @hackerrivals',
-      'GitHub: /hackerrivals',
-    ],
+    items: {
+      email: 'info@hackerrivals.com',
+      discord: 'https://discord.gg/wg372JtEK8',
+      github: 'https://github.com/HackerRivals',
+    },
   },
   bottom: {
     copyright: 'HackerRivals. All rights reserved.',
@@ -57,12 +56,10 @@ export const footerContent = {
     },
   },
   social: {
-    email: 'info@hackerrivals.com',
-    links: [
-      { name: 'GitHub', href: '#', ariaLabel: 'GitHub' },
-      { name: 'Twitter', href: '#', ariaLabel: 'Twitter' },
-      { name: 'Discord', href: '#', ariaLabel: 'Discord' },
-      { name: 'Email', href: 'mailto:info@hackerrivals.com', ariaLabel: 'Email' },
-    ],
+    links: {
+      discord: 'https://discord.gg/wg372JtEK8',
+      github: 'https://github.com/HackerRivals',
+      email: 'mailto:info@hackerrivals.com',
+    },
   },
 };
