@@ -1,17 +1,30 @@
-import React, { useMemo } from 'react';
-import { Trophy, Medal } from 'iconoir-react';
+import React, { useMemo, useState } from 'react';
+import { Trophy, Medal, Search } from 'iconoir-react';
 import { LEADERBOARD_DATA } from '../../constants/leaderboardData';
 
 const Leaderboard: React.FC = () => {
-  // Memoized sorting function
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Memoized sorting and filtering function
   const sortedLeaderboard = useMemo(() => {
-    return [...LEADERBOARD_DATA].sort((a, b) => {
+    let filtered = [...LEADERBOARD_DATA];
+
+    if (searchQuery.trim()) {
+      const lowerQuery = searchQuery.toLowerCase();
+      filtered = filtered.filter(
+        (team) =>
+          team.teamName.toLowerCase().includes(lowerQuery) ||
+          team.members.some((m) => m.toLowerCase().includes(lowerQuery)),
+      );
+    }
+
+    return filtered.sort((a, b) => {
       if (b.totalPoints !== a.totalPoints) {
         return b.totalPoints - a.totalPoints;
       }
       return a.teamName.localeCompare(b.teamName);
     });
-  }, []);
+  }, [searchQuery]);
 
   const getRankBadge = (index: number) => {
     switch (index) {
@@ -63,6 +76,19 @@ const Leaderboard: React.FC = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mt-6">
             Top teams battling for the championship across all hacking tracks and esports matches.
           </p>
+
+          <div className="mt-10 max-w-md mx-auto relative">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+              <Search className="w-5 h-5 text-primary" />
+            </div>
+            <input
+              type="text"
+              placeholder="Search by team or member name..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full bg-card/50 backdrop-blur-md border border-primary/30 rounded-full py-3.5 pl-12 pr-6 text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:shadow-neon transition-all duration-300"
+            />
+          </div>
         </div>
 
         <div className="flex flex-col gap-4">

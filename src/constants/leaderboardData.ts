@@ -80,5 +80,5 @@ export const LEADERBOARD_DATA: TeamLeaderboardRecord[] = [
     matchesWon: 2,
     winRate: 33.3,
     totalPoints: 250,
-  }
+  },
 ];

@@ -1,32 +1,32 @@
-// import { sponsors } from '../../constants/sponsors';
+import { sponsors } from '../../constants/sponsors';
 import { sponsorsContent } from '../../constants/sponsorsContent';
 
 const Sponsors = () => {
-  // const getTierStyle = (tier: string) => {
-  //   switch (tier) {
-  //     case 'Platinum':
-  //       return 'border-primary text-primary shadow-neon';
-  //     case 'Gold':
-  //       return 'border-secondary text-secondary shadow-green';
-  //     case 'Silver':
-  //       return 'border-accent text-accent shadow-purple';
-  //     default:
-  //       return 'border-muted-foreground text-muted-foreground';
-  //   }
-  // };
+  const getTierStyle = (tier: string) => {
+    switch (tier) {
+      case 'Platinum':
+        return 'border-primary text-primary shadow-neon';
+      case 'Gold':
+        return 'border-secondary text-secondary shadow-green';
+      case 'Silver':
+        return 'border-accent text-accent shadow-purple';
+      default:
+        return 'border-muted-foreground text-muted-foreground';
+    }
+  };
 
-  // const getTierSize = (tier: string) => {
-  //   switch (tier) {
-  //     case 'Platinum':
-  //       return 'w-32 h-32 text-2xl';
-  //     case 'Gold':
-  //       return 'w-28 h-28 text-xl';
-  //     case 'Silver':
-  //       return 'w-24 h-24 text-lg';
-  //     default:
-  //       return 'w-64 h-20';
-  //   }
-  // };
+  const getTierSize = (tier: string) => {
+    switch (tier) {
+      case 'Platinum':
+        return 'w-32 h-32 text-2xl';
+      case 'Gold':
+        return 'w-28 h-28 text-xl';
+      case 'Silver':
+        return 'w-24 h-24 text-lg';
+      default:
+        return 'w-64 h-20';
+    }
+  };
 
   return (
     <section id="sponsors" className="py-16 md:py-30 px-4 relative overflow-hidden">
@@ -139,11 +139,11 @@ const Sponsors = () => {
         </div> */}
 
         {/* Sponsors */}
-        {/* <div className="mb-12 md:mb-16 animate-slide-up delay-700">
+        <div className="mb-12 md:mb-16 animate-slide-up delay-700">
           <h3 className="font-heading font-bold text-sm md:text-base text-center mb-8 text-muted-foreground">
             {sponsorsContent.tiers.none}
           </h3>
-          <div className="flex justify-center gap-2 md:gap-4 flex-wrap">
+          <div className="flex justify-center gap-4 md:gap-8 flex-wrap">
             {sponsors
               .filter((sponsor) => sponsor.tier === 'None')
               .map((sponsor, index) => (
@@ -151,7 +151,7 @@ const Sponsors = () => {
                   key={index}
                   className={`${getTierSize(sponsor.tier)} ${getTierStyle(
                     sponsor.tier,
-                  )} bg-card rounded-lg flex items-center justify-center font-heading font-bold hover:scale-110 transition-all duration-500 cursor-pointer animate-bounce-in p-4 ${sponsor.tier === 'None' ? 'border-0 bg-white' : 'border'}`}
+                  )} rounded-lg flex items-center justify-center font-heading font-bold hover:scale-110 transition-all duration-500 cursor-pointer animate-bounce-in p-4 ${sponsor.tier === 'None' ? 'bg-white/90 border border-primary/30 hover:shadow-neon' : 'bg-card border'}`}
                   style={{ animationDelay: `${(index + 6) * 0.1}s` }}
                 >
                   <a
@@ -163,13 +163,13 @@ const Sponsors = () => {
                     <img
                       src={sponsor.logo}
                       alt={`${sponsor.name} logo`}
-                      className="w-full h-full object-contain"
+                      className="max-w-full max-h-full object-contain"
                     />
                   </a>
                 </div>
               ))}
           </div>
-        </div> */}
+        </div>
 
         {/* Call for sponsors */}
         <div className="text-center animate-fade-in delay-800">
