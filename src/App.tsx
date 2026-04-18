@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ESportsSection from './components/ESportsSection';
+import Leaderboard from './components/Leaderboard';
 import Schedule from './components/Schedule';
 import VenueInfo from './components/VenueInfo';
 import Register from './components/Register';
@@ -47,6 +48,7 @@ function App() {
       <main id="main-content">
         <Hero />
         <ESportsSection />
+        <Leaderboard />
         {eventActive && <Schedule />}
         {eventActive && <VenueInfo />}
         <Register />
