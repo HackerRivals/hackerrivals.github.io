@@ -18,11 +18,16 @@ const Leaderboard: React.FC = () => {
       );
     }
 
-    return filtered.sort((a, b) => {
+    const sorted = filtered.sort((a, b) => {
       if (b.totalPoints !== a.totalPoints) {
         return b.totalPoints - a.totalPoints;
       }
       return a.teamName.localeCompare(b.teamName);
+    });
+
+    return sorted.map((team, _, arr) => {
+      const rankIndex = arr.findIndex((t) => t.totalPoints === team.totalPoints);
+      return { ...team, rankIndex };
     });
   }, [searchQuery]);
 
@@ -95,20 +100,22 @@ const Leaderboard: React.FC = () => {
           <div className="hidden lg:grid grid-cols-12 gap-4 px-8 py-4 text-sm font-bold text-muted-foreground tracking-wider border-b border-primary/20 bg-card/30 rounded-t-xl uppercase">
             <div className="col-span-1 text-center">Rank</div>
             <div className="col-span-3">Team</div>
-            <div className="col-span-2 text-center">Matches</div>
-            <div className="col-span-2 text-center">Wins</div>
-            <div className="col-span-2 text-center">Win Rate</div>
+            <div className="col-span-2 text-center">Tournaments</div>
+            <div className="col-span-1 text-center">Wins</div>
+            <div className="col-span-2 text-center">Finals</div>
+            <div className="col-span-1 text-center">Win Rate</div>
             <div className="col-span-2 text-right">Points</div>
           </div>
 
-          {sortedLeaderboard.map((team, index) => {
-            const isTop3 = index < 3;
+          {sortedLeaderboard.map((team, arrayIndex) => {
+            const rankIndex = team.rankIndex;
+            const isTop3 = rankIndex < 3;
 
             return (
               <div
                 key={team.id}
-                className={`group grid grid-cols-1 lg:grid-cols-12 gap-4 items-center p-6 rounded-xl border backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-neon relative overflow-hidden ${getRankBadge(index)}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`group grid grid-cols-1 lg:grid-cols-12 gap-4 items-center p-6 rounded-xl border backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-neon relative overflow-hidden ${getRankBadge(rankIndex)}`}
+                style={{ animationDelay: `${arrayIndex * 0.1}s` }}
               >
                 {/* Subtle gradient effect on hover matching schedule/cards */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -119,19 +126,19 @@ const Leaderboard: React.FC = () => {
                     Rank
                   </span>
                   <div className="flex items-center justify-center gap-2">
-                    {index === 0 && (
+                    {rankIndex === 0 && (
                       <Trophy className="w-8 h-8 text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]" />
                     )}
-                    {index === 1 && (
+                    {rankIndex === 1 && (
                       <Medal className="w-7 h-7 text-gray-300 drop-shadow-[0_0_8px_rgba(209,213,219,0.8)]" />
                     )}
-                    {index === 2 && (
+                    {rankIndex === 2 && (
                       <Medal className="w-7 h-7 text-amber-600 drop-shadow-[0_0_8px_rgba(217,119,6,0.8)]" />
                     )}
                     <span
-                      className={`font-heading font-bold ${isTop3 ? 'text-3xl' : 'text-xl'} ${getRankColor(index)} flex items-center`}
+                      className={`font-heading font-bold ${isTop3 ? 'text-3xl' : 'text-xl'} ${getRankColor(rankIndex)} flex items-center`}
                     >
-                      {getRankLabel(index)}
+                      {getRankLabel(rankIndex)}
                     </span>
                   </div>
                 </div>
@@ -139,7 +146,7 @@ const Leaderboard: React.FC = () => {
                 {/* Team Name */}
                 <div className="col-span-3 flex flex-col items-start justify-center py-2 lg:py-0">
                   <h3
-                    className={`font-bold font-heading tracking-wide ${isTop3 ? 'text-2xl ' + getRankColor(index) : 'text-xl text-primary-light'} group-hover:text-glow transition-all duration-300`}
+                    className={`font-bold font-heading tracking-wide ${isTop3 ? 'text-2xl ' + getRankColor(rankIndex) : 'text-xl text-primary-light'} group-hover:text-glow transition-all duration-300`}
                   >
                     {team.teamName}
                   </h3>
@@ -158,25 +165,35 @@ const Leaderboard: React.FC = () => {
                 {/* Tournaments Played */}
                 <div className="col-span-2 flex items-center justify-between lg:justify-center">
                   <span className="lg:hidden text-muted-foreground uppercase text-xs font-bold">
-                    Matches Played
+                    Tournaments Played
                   </span>
                   <span className="text-lg font-medium tracking-wide">
                     {team.tournamentsPlayed}
                   </span>
                 </div>
 
-                {/* Matches Won */}
-                <div className="col-span-2 flex items-center justify-between lg:justify-center">
+                {/* Tournaments Won */}
+                <div className="col-span-1 flex items-center justify-between lg:justify-center">
                   <span className="lg:hidden text-muted-foreground uppercase text-xs font-bold">
-                    Matches Won
+                    Tournaments Won
                   </span>
                   <span className="text-lg font-medium tracking-wide text-green-400">
-                    {team.matchesWon}
+                    {team.tournamentsWon}
+                  </span>
+                </div>
+
+                {/* Round 3 Appearances */}
+                <div className="col-span-2 flex items-center justify-between lg:justify-center">
+                  <span className="lg:hidden text-muted-foreground uppercase text-xs font-bold">
+                    Finals
+                  </span>
+                  <span className="text-lg font-medium tracking-wide text-purple-400">
+                    {team.round3Appearances}
                   </span>
                 </div>
 
                 {/* Win Rate */}
-                <div className="col-span-2 flex items-center justify-between lg:justify-center">
+                <div className="col-span-1 flex items-center justify-between lg:justify-center">
                   <span className="lg:hidden text-muted-foreground uppercase text-xs font-bold">
                     Win Rate
                   </span>

@@ -3,82 +3,77 @@ export interface TeamLeaderboardRecord {
   teamName: string;
   members: string[];
   tournamentsPlayed: number;
-  matchesWon: number;
+  tournamentsWon: number;
+  round3Appearances: number;
   winRate: number;
   totalPoints: number;
 }
 
-export const LEADERBOARD_DATA: TeamLeaderboardRecord[] = [
-  {
-    id: '8',
-    teamName: 'Neon Knights',
-    members: ['Dave', 'Eve'],
-    tournamentsPlayed: 2,
-    matchesWon: 1,
-    winRate: 50.0,
-    totalPoints: 100,
-  },
-  {
-    id: '3',
-    teamName: 'Syntax Errors',
-    members: ['Frank', 'Grace', 'Heidi'],
-    tournamentsPlayed: 5,
-    matchesWon: 3,
-    winRate: 60.0,
-    totalPoints: 250,
-  },
+const POINTS_SYSTEM = {
+  TOURNAMENT_PLAYED: 100,
+  TOURNAMENT_WIN: 300,
+  ROUND_3_APPEARANCE: 100,
+};
+
+type RawTeamData = Omit<TeamLeaderboardRecord, 'winRate' | 'totalPoints'>;
+
+const rawData: RawTeamData[] = [
   {
     id: '1',
-    teamName: 'The Glitches',
-    members: ['Peggy', 'Sybil', 'Trent'],
-    tournamentsPlayed: 12,
-    matchesWon: 10,
-    winRate: 83.3,
-    totalPoints: 1000,
-  },
-  {
-    id: '6',
-    teamName: 'Null Pointers',
-    members: ['Ivan', 'Judy'],
-    tournamentsPlayed: 3,
-    matchesWon: 1,
-    winRate: 33.3,
-    totalPoints: 100,
-  },
-  {
-    id: '4',
-    teamName: 'Byte Me',
-    members: ['Mallory', 'Oscar'],
-    tournamentsPlayed: 8,
-    matchesWon: 5,
-    winRate: 62.5,
-    totalPoints: 500,
+    teamName: 'JugHeads',
+    members: ['Mehrdad', 'Monzer', 'Sotheng', 'Nichanun'],
+    tournamentsPlayed: 1,
+    tournamentsWon: 1,
+    round3Appearances: 1,
   },
   {
     id: '2',
-    teamName: 'Cyber Punks',
-    members: ['Alice', 'Bob', 'Charlie'],
-    tournamentsPlayed: 10,
-    matchesWon: 7,
-    winRate: 70.0,
-    totalPoints: 750,
+    teamName: 'Merge_Conflicts',
+    members: ['Kushagra', 'Sayuj'],
+    tournamentsPlayed: 1,
+    tournamentsWon: 0,
+    round3Appearances: 1,
+  },
+  {
+    id: '3',
+    teamName: 'Team Cypress',
+    members: ['Kansuke', 'Tomohiro', 'Wataru', 'Keita', 'Nagomi'],
+    tournamentsPlayed: 1,
+    tournamentsWon: 0,
+    round3Appearances: 0,
+  },
+  {
+    id: '4',
+    teamName: 'Pacific',
+    members: ['Richard', 'Tomoya', 'Luis', 'Takanobu'],
+    tournamentsPlayed: 1,
+    tournamentsWon: 0,
+    round3Appearances: 0,
   },
   {
     id: '5',
-    teamName: 'Loop Hole',
-    members: ['Victor', 'Walter'],
-    tournamentsPlayed: 9,
-    matchesWon: 5,
-    winRate: 55.5,
-    totalPoints: 500,
-  },
-  {
-    id: '7',
-    teamName: 'Ctrl Alt Defeat',
-    members: ['Xeno', 'Yara', 'Zane'],
-    tournamentsPlayed: 6,
-    matchesWon: 2,
-    winRate: 33.3,
-    totalPoints: 250,
+    teamName: 'CST',
+    members: ['Noufil', 'Towa', 'Aryan'],
+    tournamentsPlayed: 1,
+    tournamentsWon: 0,
+    round3Appearances: 0,
   },
 ];
+
+export const LEADERBOARD_DATA: TeamLeaderboardRecord[] = rawData.map((team) => {
+  const totalPoints =
+    team.tournamentsPlayed * POINTS_SYSTEM.TOURNAMENT_PLAYED +
+    team.tournamentsWon * POINTS_SYSTEM.TOURNAMENT_WIN +
+    team.round3Appearances * POINTS_SYSTEM.ROUND_3_APPEARANCE;
+
+  const winRate =
+    team.tournamentsPlayed > 0
+      ? Number(((team.tournamentsWon / team.tournamentsPlayed) * 100).toFixed(1))
+      : 0.0;
+
+  return {
+    ...team,
+    totalPoints,
+    winRate,
+  };
+});
