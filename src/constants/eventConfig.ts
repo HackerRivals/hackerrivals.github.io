@@ -9,6 +9,10 @@
 // 🎯 CHANGE THIS VALUE TO TOGGLE EVENT STATE 🎯
 export const HAS_ACTIVE_EVENT = true;
 
+// 🎯 CHANGE THIS VALUE TO TOGGLE EVENT STARTED STATE 🎯
+// Only applicable when HAS_ACTIVE_EVENT is true
+export const HAS_EVENT_STARTED = true;
+
 // ============================================================================
 // Event Content Configuration (No need to modify below this line)
 // ============================================================================
@@ -87,4 +91,9 @@ export const getCurrentEventContent = () => {
 // Helper function to check if event is active
 export const isEventActive = () => {
   return HAS_ACTIVE_EVENT;
+};
+
+// Helper function to check if event has started
+export const hasEventStarted = () => {
+  return HAS_ACTIVE_EVENT && HAS_EVENT_STARTED;
 };

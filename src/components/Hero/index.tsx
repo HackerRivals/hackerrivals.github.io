@@ -1,9 +1,11 @@
 import Countdown from '../Countdown';
 import { heroContent } from '../../constants/hero';
-import { isEventActive } from '../../constants/eventConfig';
+import { isEventActive, hasEventStarted } from '../../constants/eventConfig';
 
 const Hero = () => {
   const eventActive = isEventActive();
+  const eventStarted = hasEventStarted();
+
   return (
     <section
       className="min-h-screen flex flex-col items-center justify-center overflow-hidden relative"
@@ -103,33 +105,73 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Countdown Timer */}
-      <div className="mb-8 animate-fade-in delay-400">
-        <Countdown />
+      {/* Countdown Timer or Live Event Status */}
+      <div className="mb-8 animate-fade-in delay-400 w-full max-w-4xl mx-auto px-4">
+        {!eventStarted ? (
+          <Countdown />
+        ) : (
+          <div className="flex flex-col items-center justify-center p-8 bg-card/80 backdrop-blur-md border-[2px] border-accent/70 rounded-xl shadow-[0_0_30px_rgba(var(--accent-rgb),0.4)] animate-pulse-slow">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="relative flex h-5 w-5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-5 w-5 bg-accent"></span>
+              </span>
+              <h2 className="text-2xl md:text-4xl font-heading font-black text-glow uppercase tracking-wider text-accent text-center">
+                Live Now
+              </h2>
+              <span className="relative flex h-5 w-5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75 delay-300"></span>
+                <span className="relative inline-flex rounded-full h-5 w-5 bg-accent"></span>
+              </span>
+            </div>
+            <p className="text-lg md:text-xl text-center text-foreground font-body max-w-2xl">
+              The competition is currently underway! Watch the hackers battle it out and don't
+              forget to cast your vote.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Registration Buttons */}
       {eventActive && (
-        <div className="mb-12 animate-fade-in delay-500">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto px-4">
-            <a
-              href="https://luma.com/cloudsummit26"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-neon font-body text-lg py-3 px-8 w-full sm:w-auto transform hover:scale-105 transition-all duration-300 text-center"
-            >
-              Attendee Ticket
-            </a>
-            <a
-              href="#register"
-              className="btn-neon font-body text-lg py-3 px-8 w-full sm:w-auto transform hover:scale-105 transition-all duration-300 text-center"
-            >
-              Apply to Compete
-            </a>
+        <div className="mb-12 animate-fade-in delay-500 w-full">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto px-4 flex-wrap">
+            {!eventStarted && (
+              <>
+                <a
+                  href="https://luma.com/cloudsummit26"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-neon font-body text-lg py-3 px-8 w-full sm:w-auto transform hover:scale-105 transition-all duration-300 text-center shrink-0"
+                >
+                  Attendee Ticket
+                </a>
+                <a
+                  href="#register"
+                  className="btn-neon font-body text-lg py-3 px-8 w-full sm:w-auto transform hover:scale-105 transition-all duration-300 text-center shrink-0"
+                >
+                  Apply to Compete
+                </a>
+              </>
+            )}
+            {eventStarted && (
+              <a
+                href="https://hackerrivals.com/vote"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 group px-8 py-3 bg-gradient-to-r from-accent/20 to-secondary/20 backdrop-blur-md border border-accent/50 rounded-lg shadow-neon font-body text-lg text-white font-bold transition-all duration-300 hover:scale-105 hover:from-accent/30 hover:to-secondary/30 shrink-0"
+              >
+                <span className="text-xl group-hover:scale-110 transition-transform duration-300">
+                  🔥
+                </span>
+                <span>Vote for a Team</span>
+              </a>
+            )}
           </div>
-          <p className="font-body text-sm text-muted-foreground text-center mt-3 max-w-lg mx-auto">
-            Choose your experience: Purchase a ticket to attend or apply to compete for the $1000
-            prize
+          <p className="font-body text-sm text-muted-foreground text-center mt-4 max-w-lg mx-auto px-4">
+            {eventStarted
+              ? 'Support your favorite team by casting your vote below!'
+              : 'Choose your experience: Purchase a ticket to attend or apply to compete for the $1000 prize'}
           </p>
         </div>
       )}
