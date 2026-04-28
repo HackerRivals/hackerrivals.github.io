@@ -11,7 +11,7 @@ export const HAS_ACTIVE_EVENT = true;
 
 // 🎯 CHANGE THIS VALUE TO TOGGLE EVENT STARTED STATE 🎯
 // Only applicable when HAS_ACTIVE_EVENT is true
-export const HAS_EVENT_STARTED = true;
+export const HAS_EVENT_STARTED = false;
 
 // ============================================================================
 // Event Content Configuration (No need to modify below this line)
