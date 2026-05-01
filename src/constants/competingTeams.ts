@@ -8,7 +8,7 @@ export const competingTeams: CompetingTeam[] = [
   {
     id: 1,
     name: 'Semiahmoo Secondary Team',
-    members: ['Kairui Bi'],
+    members: ['Kairui Bi', 'Bernie', 'Dreyson'],
   },
   {
     id: 2,
