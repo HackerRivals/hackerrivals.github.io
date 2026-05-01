@@ -8,6 +8,7 @@ import Leaderboard from './components/Leaderboard';
 import Schedule from './components/Schedule';
 import VenueInfo from './components/VenueInfo';
 import Register from './components/Register';
+import CompetingTeams from './components/CompetingTeams';
 import Sponsors from './components/Sponsors';
 import FAQ from './components/FAQ';
 import Team from './components/Team';
@@ -48,6 +49,7 @@ function App() {
       <main id="main-content">
         <Hero />
         <ESportsSection />
+        <CompetingTeams />
         <Leaderboard />
         {eventActive && <Schedule />}
         {eventActive && <VenueInfo />}
