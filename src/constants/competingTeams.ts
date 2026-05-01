@@ -7,8 +7,8 @@ export interface CompetingTeam {
 export const competingTeams: CompetingTeam[] = [
   {
     id: 1,
-    name: 'Old Fellows',
-    members: ['Petrus'],
+    name: 'Semiahmoo Secondary Team',
+    members: ['Kairui Bi'],
   },
   {
     id: 2,
