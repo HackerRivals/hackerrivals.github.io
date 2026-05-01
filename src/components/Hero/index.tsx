@@ -180,7 +180,7 @@ const Hero = () => {
             )}
             {eventStarted && (
               <a
-                href="https://hackerrivals.com/vote"
+                href="https://hackerrivals-poll.up.railway.app/poll/ba4ec706-3b37-4816-8c80-b15ce56a2253"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 group px-8 py-3 bg-gradient-to-r from-accent/20 to-secondary/20 backdrop-blur-md border border-accent/50 rounded-lg shadow-neon font-body text-lg text-white font-bold transition-all duration-300 hover:scale-105 hover:from-accent/30 hover:to-secondary/30 shrink-0"
@@ -188,7 +188,7 @@ const Hero = () => {
                 <span className="text-xl group-hover:scale-110 transition-transform duration-300">
                   🔥
                 </span>
-                <span>Vote for a Team</span>
+                <span>Vote for a Whammy</span>
               </a>
             )}
           </div>
