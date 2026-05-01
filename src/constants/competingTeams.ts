@@ -8,7 +8,7 @@ export const competingTeams: CompetingTeam[] = [
   {
     id: 1,
     name: 'Semiahmoo Secondary Team',
-    members: ['Kairui Bi', 'Bernie', 'Dreyson'],
+    members: ['Kairui', 'Bernie', 'Dreyson'],
   },
   {
     id: 2,
@@ -17,13 +17,13 @@ export const competingTeams: CompetingTeam[] = [
   },
   {
     id: 3,
-    name: 'Direction',
-    members: ['Elnaz', 'Alireza'],
+    name: 'PlayOnCloud',
+    members: ['Juan', 'Marcia'],
   },
   {
     id: 4,
     name: 'Merge_Conflicts',
-    members: ['Kush', 'Sayuj'],
+    members: ['Kush', 'Sayuj', 'Sarim'],
   },
   {
     id: 5,

@@ -28,7 +28,7 @@ export const scheduleItems = [
     bgColor: 'bg-secondary/10',
   },
   {
-    time: '03:00 PM',
+    time: '3:50 PM',
     title: 'Round 1: Concept Presentation',
     description: 'eSports hackathon begins! Teams present their innovative concepts',
     icon: Gamepad,
@@ -36,7 +36,7 @@ export const scheduleItems = [
     bgColor: 'bg-accent/10',
   },
   {
-    time: '03:15 PM',
+    time: '04:30 PM',
     title: 'Whammy Announced',
     description: 'The whammy is announced. Teams can continue working on their projects.',
     icon: InfoCircle,
@@ -44,7 +44,7 @@ export const scheduleItems = [
     bgColor: 'bg-primary/10',
   },
   {
-    time: '04:30 PM',
+    time: '05:30 PM',
     title: 'Round 2: MVP Knockout',
     description: 'Intense knockout round - only 2 teams advance to the final!',
     icon: Rocket,
@@ -52,7 +52,7 @@ export const scheduleItems = [
     bgColor: 'bg-secondary/10',
   },
   {
-    time: '06:00 PM',
+    time: '06:30 PM',
     title: 'Final Round: Main Stage',
     description: 'Polished presentations combining concept, architecture & demo',
     icon: Presentation,
@@ -60,7 +60,7 @@ export const scheduleItems = [
     bgColor: 'bg-accent/10',
   },
   {
-    time: '06:30 PM',
+    time: '07:00 PM',
     title: 'Wrap-up & Prize Ceremony',
     description: 'Winner announcement, $1,000 cash prize, and charity donation',
     icon: Trophy,
@@ -68,7 +68,7 @@ export const scheduleItems = [
     bgColor: 'bg-primary/10',
   },
   {
-    time: '07:00 PM+',
+    time: '07:30 PM+',
     title: 'VIP After Party',
     description: 'Exclusive celebration at Science World',
     icon: Building,
