@@ -110,25 +110,49 @@ const Hero = () => {
         {!eventStarted ? (
           <Countdown />
         ) : (
-          <div className="flex flex-col items-center justify-center p-8 bg-card/80 backdrop-blur-md border-[2px] border-accent/70 rounded-xl shadow-[0_0_30px_rgba(var(--accent-rgb),0.4)] animate-pulse-slow">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="relative flex h-5 w-5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-5 w-5 bg-accent"></span>
-              </span>
-              <h2 className="text-2xl md:text-4xl font-heading font-black text-glow uppercase tracking-wider text-accent text-center">
-                Live Now
-              </h2>
-              <span className="relative flex h-5 w-5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75 delay-300"></span>
-                <span className="relative inline-flex rounded-full h-5 w-5 bg-accent"></span>
-              </span>
+          <a
+            href="#competing-teams"
+            className="block transition-transform duration-300 hover:scale-[1.03]"
+          >
+            <div className="flex flex-col items-center justify-center p-8 bg-card/80 backdrop-blur-md border-[2px] border-accent/70 rounded-xl shadow-[0_0_30px_rgba(var(--accent-rgb),0.4)] animate-pulse-slow hover:border-accent hover:shadow-[0_0_50px_rgba(var(--accent-rgb),0.7)] cursor-pointer relative overflow-hidden group">
+              {/* Animated background glow */}
+              <div className="absolute inset-0 bg-accent/5 group-hover:bg-accent/10 transition-colors duration-500 rounded-xl"></div>
+
+              <div className="flex items-center gap-4 mb-4 z-10 relative">
+                <span className="relative flex h-6 w-6">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-80"></span>
+                  <span className="relative inline-flex rounded-full h-6 w-6 bg-red-600 shadow-[0_0_10px_rgba(239,68,68,0.8)]"></span>
+                </span>
+                <h2 className="text-3xl md:text-5xl font-heading font-black text-red-500 uppercase tracking-widest text-center">
+                  Live Now
+                </h2>
+                <span className="relative flex h-6 w-6">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-80 delay-300"></span>
+                  <span className="relative inline-flex rounded-full h-6 w-6 bg-red-600 shadow-[0_0_10px_rgba(239,68,68,0.8)]"></span>
+                </span>
+              </div>
+              <p className="text-lg md:text-xl text-center text-foreground font-body max-w-2xl font-medium z-10 relative">
+                The tournament is currently underway! Watch the hackers battle it out and don't
+                forget to cast your vote.
+              </p>
+              <div className="mt-6 text-base font-bold text-accent flex items-center gap-2 bg-accent/10 px-6 py-2 rounded-full border border-accent/30 z-10 relative">
+                <span>View Currently Competing Teams</span>
+                <svg
+                  className="w-5 h-5 animate-bounce"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2.5"
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  ></path>
+                </svg>
+              </div>
             </div>
-            <p className="text-lg md:text-xl text-center text-foreground font-body max-w-2xl">
-              The competition is currently underway! Watch the hackers battle it out and don't
-              forget to cast your vote.
-            </p>
-          </div>
+          </a>
         )}
       </div>
 
