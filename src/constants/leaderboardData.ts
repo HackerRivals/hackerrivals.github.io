@@ -31,8 +31,8 @@ const rawData: RawTeamData[] = [
     teamName: 'Merge_Conflicts',
     members: ['Kushagra', 'Sayuj', 'Sarim'],
     tournamentsPlayed: 2,
-    tournamentsWon: 0,
-    round3Appearances: 1,
+    tournamentsWon: 1,
+    round3Appearances: 2,
   },
   {
     id: '3',
@@ -64,7 +64,7 @@ const rawData: RawTeamData[] = [
     members: ['Kairui', 'Bernie', 'Dreyson'],
     tournamentsPlayed: 1,
     tournamentsWon: 0,
-    round3Appearances: 0,
+    round3Appearances: 1,
   },
   {
     id: '7',
@@ -76,14 +76,6 @@ const rawData: RawTeamData[] = [
   },
   {
     id: '8',
-    teamName: 'PlayOnCloud',
-    members: ['Juan', 'Marcia'],
-    tournamentsPlayed: 1,
-    tournamentsWon: 0,
-    round3Appearances: 0,
-  },
-  {
-    id: '9',
     teamName: 'The Rizzlers',
     members: ['Greg', 'Wiliam'],
     tournamentsPlayed: 1,

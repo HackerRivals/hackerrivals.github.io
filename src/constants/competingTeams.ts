@@ -17,16 +17,11 @@ export const competingTeams: CompetingTeam[] = [
   },
   {
     id: 3,
-    name: 'PlayOnCloud',
-    members: ['Juan', 'Marcia'],
-  },
-  {
-    id: 4,
     name: 'Merge_Conflicts',
     members: ['Kush', 'Sayuj', 'Sarim'],
   },
   {
-    id: 5,
+    id: 4,
     name: 'The Rizzlers',
     members: ['Greg', 'Wiliam'],
   },
