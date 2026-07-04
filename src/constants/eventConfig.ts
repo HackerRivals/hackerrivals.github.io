@@ -7,7 +7,7 @@
  */
 
 // 🎯 CHANGE THIS VALUE TO TOGGLE EVENT STATE 🎯
-export const HAS_ACTIVE_EVENT = false;
+export const HAS_ACTIVE_EVENT = true;
 
 // 🎯 CHANGE THIS VALUE TO TOGGLE EVENT STARTED STATE 🎯
 // Only applicable when HAS_ACTIVE_EVENT is true
@@ -31,14 +31,14 @@ export const eventConfig = {
       emphasis: 'spectators',
     },
     event: {
-      date: 'May 1, 2026',
-      location: 'Science World • 2pm-7pm',
-      afterParty: '+ VIP After Party @ Science World',
+      date: 'August 29, 2026',
+      location: 'Northeastern University, Toronto • 12pm-5pm',
+      afterParty: '+ VIP After Party @ Northeastern Campus',
       prize: '$1000 Cash Prize',
     },
     countdown: {
       title: 'Next Event Starts In',
-      targetDate: '2026-05-01T13:00:00',
+      targetDate: '2026-08-29T12:00:00',
       progressText: 'The countdown to innovation begins now',
     },
     registration: {
@@ -46,7 +46,7 @@ export const eventConfig = {
       title: 'Join the Battle',
       subtitle:
         'Ready to compete? Register your team and prepare for the ultimate hackathon showdown.',
-      buttonText: 'Register for Cloud Summit',
+      buttonText: 'Register Now',
     },
   },
 

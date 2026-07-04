@@ -1,12 +1,12 @@
 // import couchbaseLogo from '../assets/couchbase-logo.svg';
-import elasticsearchLogo from '../assets/elasticsearch-logo.svg';
+import bdoLogo from '../assets/BDO_Logo.svg';
 
 export const sponsors = [
   // { name: 'Couchbase', tier: 'None', logo: couchbaseLogo, link: 'https://www.couchbase.com/' },
   {
-    name: 'Elasticsearch',
+    name: 'BDO',
     tier: 'None',
-    logo: elasticsearchLogo,
-    link: 'https://www.elastic.co/elasticsearch',
+    logo: bdoLogo,
+    link: 'https://www.bdo.ca/',
   },
 ];

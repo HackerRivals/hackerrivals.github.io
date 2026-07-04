@@ -106,6 +106,6 @@ export const teamMembers: TeamMember[] = [
     description: 'Join our team and help create amazing gaming experiences!',
     image: join,
     isJoinCard: true,
-    href: 'https://tally.so/r/mOvb6Y',
+    href: 'https://tally.so/r/nr7dgp',
   },
 ];

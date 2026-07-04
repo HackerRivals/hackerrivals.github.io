@@ -163,7 +163,7 @@ const Hero = () => {
             {!eventStarted && (
               <>
                 <a
-                  href="https://luma.com/cloudsummit26"
+                  href="https://luma.com/0xpa2rxj"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-neon font-body text-lg py-3 px-8 w-full sm:w-auto transform hover:scale-105 transition-all duration-300 text-center shrink-0"

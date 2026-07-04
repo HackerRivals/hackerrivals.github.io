@@ -24,7 +24,7 @@ const Schedule = () => {
           {/* Quick Action Links */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in delay-300">
             <a
-              href="https://luma.com/cloudsummit26"
+              href="https://luma.com/0xpa2rxj"
               className="inline-flex items-center px-6 py-3 bg-primary/10 hover:bg-primary/20 border border-primary rounded-lg text-primary font-semibold transition-all duration-300 hover:scale-105"
             >
               Get Attendee Tickets
