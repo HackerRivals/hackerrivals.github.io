@@ -81,13 +81,6 @@ const VenueInfo = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-5 h-5 mr-3 flex-shrink-0"></div>
-                  <p className="text-muted-foreground">
-                    <strong className="text-foreground">{venueContent.mainInfo.labels.date}</strong>{' '}
-                    {venueContent.mainInfo.event.date}
-                  </p>
-                </div>
-                <div className="flex items-center">
                   <Calendar className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
                   <button
                     onClick={addToCalendar}
@@ -156,6 +149,14 @@ const VenueInfo = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Date centered across full width */}
+          <div className="text-center mt-6">
+            <p className="text-muted-foreground">
+              <strong className="text-foreground">{venueContent.mainInfo.labels.date}</strong>{' '}
+              {venueContent.mainInfo.event.date}
+            </p>
           </div>
         </div>
 
