@@ -94,6 +94,8 @@ export const teamMembers: TeamMember[] = [
     image: rohan,
     social: {
       linkedin: 'https://www.linkedin.com/in/rohanhdani/',
+      github: 'https://github.com/rohandani',
+      portfolio: 'https://rohandani.github.io/',
       email: 'rohanhdani@gmail.com',
     },
   },
