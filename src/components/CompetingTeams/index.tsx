@@ -5,7 +5,7 @@ const CompetingTeams = () => {
   const eventActive = isEventActive();
   const eventStarted = hasEventStarted();
 
-  if (!eventActive) return null;
+  if (!eventActive || !competingTeams || competingTeams.length === 0) return null;
 
   const title = eventStarted ? 'CURRENTLY COMPETING' : 'TEAMS READY TO COMPETE';
 
