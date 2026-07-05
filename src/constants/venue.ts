@@ -3,18 +3,18 @@ import { CoffeeCup, Group, Trophy } from 'iconoir-react';
 export const venueContent = {
   header: {
     title: 'Venue & Location',
-    subtitle: 'Science World - A iconic landmark for innovation and collaboration',
+    subtitle: 'Northeastern University, Toronto Campus',
   },
   mainInfo: {
-    name: 'Science World',
+    name: 'Northeastern University',
     address: {
-      street: '1455 Quebec St',
-      city: 'Vancouver, BC V6A 3Z7',
+      street: '375 Queen St W',
+      city: 'Toronto, ON M5V 2A5, Canada',
     },
     event: {
-      date: 'Saturday, May 1st, 2026',
-      time: '02:00 PM - 07:00 PM',
-      afterParty: 'Science World (07:00 PM - 09:00 PM)',
+      date: 'Saturday, Aug 29th, 2026',
+      time: '12:00 PM - 07:00 PM',
+      afterParty: 'Northeastern University, Toronto Campus (07:00 PM - 09:00 PM)',
     },
     labels: {
       date: 'Date:',

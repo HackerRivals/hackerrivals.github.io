@@ -109,7 +109,7 @@ const VenueInfo = () => {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h3 className="font-heading font-bold text-2xl mb-4">
                 {venueContent.mainInfo.transportation.title}
               </h3>
@@ -148,7 +148,7 @@ const VenueInfo = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Date centered across full width */}
