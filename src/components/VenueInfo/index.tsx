@@ -1,4 +1,4 @@
-import { Building, MapPin, Car, Calendar, NavArrowUp } from 'iconoir-react';
+import { Building, MapPin, Calendar, NavArrowUp } from 'iconoir-react';
 import { venueContent } from '../../constants/venue';
 
 const VenueInfo = () => {
