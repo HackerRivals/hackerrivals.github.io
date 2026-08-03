@@ -19,7 +19,7 @@ export const registrationContent = {
     competitor: {
       title: 'Competitor Application',
       description:
-        'Apply to compete in the hackathon for a chance to win the $1000 cash prize. Accepted competitors receive a free one-time ticket code for the event.',
+        'Apply to compete in the hackathon for a chance to win the $500 cash prize. Accepted competitors receive a free one-time ticket code for the event.',
       button: 'Apply to Compete',
       link: '#form',
       note: 'We will notify accepted competitors and send them instructions along with a free one-time ticket code for the event.',
@@ -42,7 +42,7 @@ export const registrationContent = {
   form: {
     title: 'Apply to Compete',
     subtitle:
-      'Submit your application below to be considered as a competitor. Selected teams will receive a free ticket code and compete for the $1000 cash prize.',
+      'Submit your application below to be considered as a competitor. Selected teams will receive a free ticket code and compete for the $500 cash prize.',
     tallyFormId: 'nr7dgp',
     tallyFormUrl: 'https://tally.so/r/nr7dgp',
     sections: {

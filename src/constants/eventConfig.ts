@@ -33,8 +33,8 @@ export const eventConfig = {
     event: {
       date: 'August 29, 2026',
       location: 'Northeastern University, Toronto • 12pm-5pm',
-      afterParty: '+ VIP After Party @ Northeastern Campus',
-      prize: '$1000 Cash Prize',
+      afterParty: '+ VIP After Party - 5 minute walk from Northeastern',
+      prize: '$500 Cash Prize',
     },
     countdown: {
       title: 'Next Event Starts In',

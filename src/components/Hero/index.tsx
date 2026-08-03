@@ -195,7 +195,7 @@ const Hero = () => {
           <p className="font-body text-sm text-muted-foreground text-center mt-4 max-w-lg mx-auto px-4">
             {eventStarted
               ? 'Support your favorite team by casting your vote below!'
-              : 'Choose your experience: Purchase a ticket to attend or apply to compete for the $1000 prize'}
+              : 'Choose your experience: Purchase a ticket to attend or apply to compete for the $500 prize'}
           </p>
         </div>
       )}

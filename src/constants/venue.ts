@@ -13,8 +13,8 @@ export const venueContent = {
     },
     event: {
       date: 'Saturday, Aug 29th, 2026',
-      time: '12:00 PM - 07:00 PM',
-      afterParty: 'Northeastern University, Toronto Campus (07:00 PM - 09:00 PM)',
+      time: '12:00 PM - 06:00 PM',
+      afterParty: 'Secret Location (06:30 PM - 09:00 PM)',
     },
     labels: {
       date: 'Date:',
@@ -26,11 +26,11 @@ export const venueContent = {
       transit: {
         title: 'Public Transit',
         description:
-          'Science World SkyTrain Station (2 blocks), Expo Line, Millennium Line, Canada Line',
+          'TTC access at Queen Street West and University Avenue. Close to Osgoode Station',
       },
       parking: {
         title: 'Parking',
-        description: 'Street parking and nearby parkades available',
+        description: 'Street parking and nearby paid parkades available',
       },
       accessibility: {
         title: 'Accessibility',
@@ -78,7 +78,7 @@ export const venueContent = {
     {
       icon: Trophy,
       title: 'Prize Competition',
-      description: '$1,000 cash prize plus additional sponsor prizes',
+      description: '$500 cash prize plus additional sponsor prizes',
       colors: {
         background: 'bg-accent/20',
         text: 'text-accent',

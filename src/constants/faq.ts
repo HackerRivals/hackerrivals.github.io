@@ -37,7 +37,7 @@ export const faqItems = [
   {
     question: 'Where exactly is the event located?',
     answer:
-      'Science World at 1455 Quebec St, Vancouver. We utilize a multi-level setup: Level 2 houses the main competition stage and audience seating, Level 5 contains the development workspace and sponsor workshops. The exclusive VIP after-party takes place at Science World.',
+      'Northeastern University at 375 Queen St W, Toronto. The exclusive VIP after-party takes place at a secret location (5 minutes walking distance from the event venue).',
   },
   {
     question: 'How do tickets work and why do you charge?',

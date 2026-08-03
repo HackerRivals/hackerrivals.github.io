@@ -233,7 +233,7 @@ This project is part of the Hacker Rivals event series. All rights reserved.
 
 ## 🙏 Acknowledgments
 
-- **Science World** - Venue partner
+- **Northeastern University** - Venue partner
 - **AWS** - Cloud infrastructure sponsor
 - **React Community** - Framework and ecosystem
 - **Open Source Contributors** - Tools and libraries
