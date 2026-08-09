@@ -4,6 +4,8 @@ import milad from '../assets/milad.jpg';
 import rohan from '../assets/rohan.png';
 import join from '../assets/join.jpg';
 import neha from '../assets/neha.png';
+import wanes from '../assets/wanes.png';
+import andrey from '../assets/andrey.png';
 
 export interface TeamMember {
   id: string;
@@ -45,6 +47,18 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: 'mc',
+    name: 'Andrey Barkov',
+    role: 'MC',
+    description:
+      'Bringing the hype, keeping the energy high, and making sure the crowd never misses a beat.',
+    image: andrey,
+    social: {
+      linkedin: 'https://www.linkedin.com/in/andreybarkov/',
+      github: 'https://github.com/andreybarkov',
+    },
+  },
+  {
     id: 'website-marketing',
     name: 'Jaskaran Singh',
     role: 'Website & Marketing',
@@ -54,7 +68,7 @@ export const teamMembers: TeamMember[] = [
     social: {
       linkedin: 'https://www.linkedin.com/in/thecodersingh/',
       github: 'https://github.com/thecodersingh',
-      x: 'https://x.com/thecodersingh',
+      x: 'https://x.com/jasbuilds',
       email: 'thecodersingh@gmail.com',
     },
   },
@@ -97,6 +111,17 @@ export const teamMembers: TeamMember[] = [
       github: 'https://github.com/rohandani',
       portfolio: 'https://rohandani.github.io/',
       email: 'rohanhdani@gmail.com',
+    },
+  },
+  {
+    id: 'operations',
+    name: 'Wanes Tutunjian',
+    role: 'Team Operations',
+    description:
+      'Jumping in wherever needed, supporting event logistics, contestant coordination, and behind-the-scenes problem-solving to keep everything running smoothly.',
+    image: wanes,
+    social: {
+      linkedin: 'https://www.linkedin.com/in/wanes-tutunjian/',
     },
   },
   {

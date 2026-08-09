@@ -24,7 +24,7 @@ const Team = () => {
         </div>
 
         {/* Team Members - Modern Circular Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 lg:gap-10 xl:gap-12 mb-12 md:mb-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12 mb-12 md:mb-16 max-w-6xl mx-auto justify-center">
           {teamMembers.map((member, index) => (
             <div
               key={member.id}
@@ -34,7 +34,7 @@ const Team = () => {
               {/* Circular Avatar with Cyberpunk Glow */}
               <div className="relative mb-4">
                 <div
-                  className={`relative w-28 h-28 md:w-36 md:h-36 lg:w-36 lg:h-36 xl:w-40 xl:h-40 mx-auto rounded-full overflow-hidden border-3 transition-all duration-500 ${
+                  className={`relative w-28 h-28 md:w-36 md:h-36 lg:w-36 lg:h-36 xl:w-50 xl:h-50 mx-auto rounded-full overflow-hidden border-3 transition-all duration-500 ${
                     member.isJoinCard
                       ? 'border-accent shadow-neon-accent group-hover:shadow-neon-accent-lg'
                       : 'border-primary shadow-neon group-hover:shadow-neon-lg'
